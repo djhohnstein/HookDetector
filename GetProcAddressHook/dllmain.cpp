@@ -14,7 +14,6 @@ HMODULE HookedGetProcAddress(HMODULE hModule, LPCSTR lpProcName) {
 }
 
 VOID Hook() {
-    srand(time(0));
     HMODULE hk32dll = GetModuleHandleA("kernel32.dll");
     FARPROC pGetProcAddress = GetProcAddress(hk32dll, "GetProcAddress");
 
